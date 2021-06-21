@@ -1,5 +1,15 @@
 import ReactDOM from 'react-dom';
-import Pet from './Pet';
+import SearchParams from './SearchParams';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Adopt Me</h1>
+      <SearchParams />
+    </div>
+  );
+};
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // const App = () => {
 //   return React.createElement('div', {}, [
@@ -21,15 +31,3 @@ import Pet from './Pet';
 //     }),
 //   ]);
 // };
-
-const App = () => {
-  return (
-    <div>
-      <h1>Adopt Me</h1>
-      <Pet name="Gaddu" animal="Dog" breed="German Shephard" />
-      <Pet name="Ketty" animal="Cat" breed="Parsian Cat" />
-      <Pet name="Pinku" animal="Dog" breed="Havanese" />
-    </div>
-  );
-};
-ReactDOM.render(<App />, document.getElementById('root'));
