@@ -73,10 +73,7 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {
-       animal || location ? <Results pets={pets} /> : null
-      }
-      
+      {<Results pets={pets} />}
     </div>
   );
 };
