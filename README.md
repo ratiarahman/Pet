@@ -1,7 +1,7 @@
 # Pet
 React.js
 
-API: 
-http://pets-v2.dev-apis.com/pets
-http://pets-v2.dev-apis.com/pets?id=1
-https://pets-v2.dev-apis.com/breeds?animal=dog
+API: <br>
+http://pets-v2.dev-apis.com/pets <br>
+http://pets-v2.dev-apis.com/pets?id=1 <br>
+https://pets-v2.dev-apis.com/breeds?animal=dog 
