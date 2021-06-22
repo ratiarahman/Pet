@@ -3,7 +3,7 @@ import useBreedList from './useBreedList';
 import Results from './Results';
 
 const SearchParams = () => {
-  const [location, setLocation] = useState('');
+  const [location, setLocation] = useState(''); //question..location search problem
   const ANIMALS = ['bird', 'dog', 'cat', 'rabbit', 'creeping']; //question
   const [animal, setAnimal] = useState(''); //shobgula pets dekhai na keno?
   const [breed, setBreed] = useState('');
@@ -12,6 +12,7 @@ const SearchParams = () => {
 
   useEffect(() => {
     requestPets();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function requestPets() {
@@ -72,7 +73,10 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      <Results pets={pets} />
+      {
+       animal || location ? <Results pets={pets} /> : null
+      }
+      
     </div>
   );
 };
