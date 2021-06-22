@@ -7,7 +7,10 @@ const Details = () => {
 
   useEffect(() => {
     requestId();
-  });
+    console.log(this);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); //[] dependency array, render once  //question console log choltei thake jodi dependancy array na dei..why?
+
   async function requestId() {
     const res = await fetch(`http://pets-v2.dev-apis.com/pets?id=${id}`);
     const json = await res.json();
