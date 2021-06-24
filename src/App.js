@@ -1,22 +1,21 @@
 import { StrictMode } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import BrowserRouter from 'react-router-dom/BrowserRouter'
 import SearchParams from './SearchParams';
 import Details from './Details'; //question ..regarding Switch
 
 const App = () => {
   return (
     <div>
-      <Router>
+      <Router basename={window.location.pathname || ''}>
         <header>
           <Link to="/">Adopt Me!</Link>
         </header>
         <Switch>
-          <Route path="/details/:id">
+          <Route exact path="/details/:id">
             <Details />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <SearchParams />
           </Route>
         </Switch>
@@ -25,11 +24,9 @@ const App = () => {
   );
 };
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
   <StrictMode>
     <App />
-  </StrictMode>
-  </BrowserRouter>,
+  </StrictMode>,
   document.getElementById('root'),
 );
 
