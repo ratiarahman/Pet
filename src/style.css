@@ -168,7 +168,6 @@ header {
   cursor: pointer;
   border: 2px solid #333;
 }
-
 .carousel-smaller > img.active {
   border-color: #333;
   opacity: 0.6;
