@@ -1,15 +1,16 @@
 {
-  "homepage": "https://ratiarahman.github.io/Pet",
+  "homepage": "http://ratiarahman.github.io/Pet",
   "name": "adopt-me",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir build",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "predeploy": "npm run dev",
-    "deploy": "gh-pages -d build"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "keywords": [],
   "author": "",
