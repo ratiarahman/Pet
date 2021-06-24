@@ -15,8 +15,6 @@ const Carousel = ({ images }) => {
       <img className="thumbnail" src={dummyImage} alt="animal" />
       <div className="carousel-smaller">
         {images.map((image, index) => {
-          console.log(index);
-          console.log(image);
           return (
             // eslint-disable-next-line
             <img src={image} alt="animal thumbnail" key={image} onClick={handleIndexClick} data-index={index} />
