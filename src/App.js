@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import BrowserRouter from 'react-router-dom/BrowserRouter'
 import SearchParams from './SearchParams';
 import Details from './Details'; //question ..regarding Switch
 
@@ -24,9 +25,11 @@ const App = () => {
   );
 };
 ReactDOM.render(
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 
