@@ -1,5 +1,5 @@
 # Pet
-React.js
+Intro to React
 
 API: <br>
 http://pets-v2.dev-apis.com/pets <br>
